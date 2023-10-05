@@ -1,4 +1,4 @@
-### Hello there 👋, I am a Software engineer and a Technical Writer, Best at Flutter mobile app development, full stack development with Mern. Other areas are like Android, .Net and Qt
+### Hello there 👋, I am a Software engineer and a Technical Writer, Best at Flutter app development, full stack development with Mern. Other areas are like Android, .Net and Qt
 
 <!--<div>
     <a href="https://github.com/JaxiroKe/github-readme-stats">
