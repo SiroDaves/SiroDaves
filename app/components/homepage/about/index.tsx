@@ -4,7 +4,7 @@ import { skills } from "@/utils/data/skills";
 import { skillsImage } from "@/utils/skill-image";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import lottieFile from '../../../assets/lottie/study.json';
+import lottieFile from '../../../assets/lottie/development.json';
 import dynamic from "next/dynamic";
 
 const AnimationLottie = dynamic(() => import("../../helper/animation-lottie"), { ssr: false });

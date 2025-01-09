@@ -1,19 +1,9 @@
+import { Blog } from '@/state/blog';
 import { timeConverter } from '@/utils/time-converter';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BsHeartFill } from 'react-icons/bs';
 import { FaCommentAlt } from 'react-icons/fa';
-
-interface Blog {
-  title: string;
-  url: string;
-  coverImage: string;
-  published_at?: string;
-  public_reactions_count?: number;
-  comments_count?: number;
-  reading_time_minutes?: number;
-  description?: string;
-}
 
 interface BlogCardProps {
   blog: Blog;
@@ -34,21 +24,17 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
 
       <div className="p-2 sm:p-3 flex flex-col">
         <div className="flex justify-between items-center text-[#16f2b3] text-sm">
-          {blog.published_at && <p>{timeConverter(blog.published_at)}</p>}
+          {blog.publishedAt && <p>{timeConverter(blog.publishedAt)}</p>}
 
           <div className="flex items-center gap-3">
-            {blog.public_reactions_count !== undefined && (
-              <p className="flex items-center gap-1">
-                <BsHeartFill />
-                <span>{blog.public_reactions_count}</span>
-              </p>
-            )}
-            {blog.comments_count && blog.comments_count > 0 && (
-              <p className="flex items-center gap-1">
-                <FaCommentAlt />
-                <span>{blog.comments_count}</span>
-              </p>
-            )}
+            <p className="flex items-center gap-1">
+              <BsHeartFill />
+              <span>{blog.reactionCount}</span>
+            </p>
+            <p className="flex items-center gap-1">
+              <FaCommentAlt />
+              <span>{blog.replyCount}</span>
+            </p>
           </div>
         </div>
 
@@ -57,18 +43,20 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
             {blog.title}
           </p>
         </Link>
+        <div className="hidden lg:block h-[1px] bg-gray-300 w-full my-2"></div>
 
-        {blog.reading_time_minutes !== undefined && (
-          <p className="mb-2 text-sm text-[#16f2b3]">
-            {`${blog.reading_time_minutes} Min Read`}
-          </p>
-        )}
-
-        {blog.description && (
+        {blog.brief && (
           <p className="text-sm lg:text-base text-[#d3d8e8] pb-3 lg:pb-6 line-clamp-3">
-            {blog.description}
+            {blog.brief}
           </p>
         )}
+
+        {blog.readTimeInMinutes !== undefined && (
+          <p className="text-sm text-[#16f2b3]">
+            {`${blog.readTimeInMinutes} Min Read`}
+          </p>
+        )}
+
       </div>
     </div>
   );
