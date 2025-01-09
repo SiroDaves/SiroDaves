@@ -1,3 +1,4 @@
+"use client";
 import { bio } from '@/utils/data/bio';
 import Link from 'next/link';
 import { BiLogoLinkedin } from "react-icons/bi";
@@ -6,6 +7,11 @@ import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoGithub, IoMdCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
 import ContactForm from './contact-form';
+
+import lottieFile from '../../../assets/lottie/code.json';
+import dynamic from "next/dynamic";
+
+const AnimationLottie = dynamic(() => import("../../helper/animation-lottie"), { ssr: false });
 
 function ContactSection() {
   return (

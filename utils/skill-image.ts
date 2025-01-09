@@ -97,7 +97,7 @@ type Skill =
   | 'unity' | 'wolframalpha' | 'canva' | 'pandas' | 'sklearn' | '.net' 
   | '.net core' | 'kubernetes' | 'linux' | 'sqlalchemy' | 'fastapi';
 
-export const skillsImage = (skill: Skill): string | undefined => {
+export const skillsImage = (skill: String): string | undefined => {
   const skillID = skill.toLowerCase();
   switch (skillID) {
     case 'gcp':

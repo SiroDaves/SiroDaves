@@ -9,7 +9,7 @@ import dynamic from "next/dynamic";
 
 const AnimationLottie = dynamic(() => import("../../helper/animation-lottie"), { ssr: false });
 
-interface AboutSectionProps {}
+interface AboutSectionProps { }
 
 const AboutSection: React.FC<AboutSectionProps> = () => {
   return (
@@ -26,7 +26,9 @@ const AboutSection: React.FC<AboutSectionProps> = () => {
             Who am I?
           </p>
           <p className="text-gray-200 text-sm lg:text-lg">
-            {bio.description}
+            {bio.description1}
+          <br/> <br/>
+            {bio.description2}
           </p>
         </div>
         <div className="flex justify-center order-2 lg:order-2">
@@ -55,7 +57,7 @@ const AboutSection: React.FC<AboutSectionProps> = () => {
                 <div className="flex flex-col items-center justify-center gap-3 p-6">
                   <div className="h-8 sm:h-10">
                     <Image
-                      src={skillsImage(skill)?.src}
+                      src={skillsImage(skill) || '/path/to/default-image.jpg'}  // fallback to default image
                       alt={skill}
                       width={30}
                       height={30}
