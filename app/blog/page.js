@@ -1,10 +1,8 @@
-// @flow strict
-
-import { personalData } from "@/utils/data/personal-data";
+import { bio } from "@/utils/data/bio";
 import BlogCard from "../components/homepage/blog/blog-card";
 
 async function getBlogs() {
-  const res = await fetch(`https://dev.to/api/articles?username=${personalData.handle}`)
+  const res = await fetch(`https://dev.to/api/articles?username=${bio.handle}`)
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')

@@ -1,5 +1,9 @@
-import { projectsData } from '@/utils/data/projects-data';
+"use client";
+import { projects } from '@/utils/data/projects';
 import ProjectCard from './project-card';
+import lottieFile from '../../../assets/lottie/study.json';
+import dynamic from "next/dynamic";
+const AnimationLottie = dynamic(() => import("../../helper/animation-lottie"), { ssr: false });
 
 const Projects = () => {
 
@@ -17,7 +21,7 @@ const Projects = () => {
 
       <div className="pt-24">
         <div className="flex flex-col gap-6">
-          {projectsData.slice(0, 4).map((project, index) => (
+          {projects.slice(0, 4).map((project, index) => (
             <div
               id={`sticky-card-${index + 1}`}
               key={index}
