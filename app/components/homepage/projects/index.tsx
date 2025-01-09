@@ -2,16 +2,6 @@
 import { projects } from '@/utils/data/projects';
 import ProjectCard from './project-card';
 
-interface Project {
-  name: string;
-  description: string;
-  tools: string[];
-  role: string;
-  image?: { src: string };
-  demo: string;
-  code: string;
-}
-
 const Projects = () => {
   return (
     <div id="projects" className="relative z-50 my-12 lg:my-24">

@@ -2,9 +2,12 @@ import * as React from 'react';
 
 interface Project {
   name: string;
+  description: string;
   tools: string[];
   role: string;
-  description: string;
+  image?: { src: string };
+  demo: string;
+  code: string;
 }
 
 interface ProjectCardProps {
