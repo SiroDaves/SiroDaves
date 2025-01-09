@@ -1,20 +1,29 @@
 "use client";
+
 import { experiences } from "@/utils/data/experiences";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import GlowCard from "../../helper/glow-card";
+
+interface Experience {
+  id: number;
+  duration: string;
+  title: string;
+  company: string;
+}
 
 export default function Experience() {
   return (
     <div id="experience" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
       <Image
         src="/section.svg"
-        alt="Hero"
+        alt="Section Background"
         width={1572}
         height={795}
         className="absolute top-0 -z-10"
       />
 
+      {/* Section Header */}
       <div className="flex justify-center lg:py-8">
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
@@ -25,23 +34,29 @@ export default function Experience() {
         </div>
       </div>
 
+      {/* Experience Cards */}
       <div className="py-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols2 gap-6">
-          {experiences.map((experience) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+          {experiences.map((experience: Experience) => (
             <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
               <div className="p-3 relative">
+                {/* Background Blur */}
                 <Image
                   src="/blur-23.svg"
-                  alt="Hero"
+                  alt="Blur Background"
                   width={1080}
                   height={200}
                   className="absolute bottom-0 opacity-80"
                 />
+
+                {/* Experience Duration */}
                 <div className="flex justify-center">
                   <p className="text-xs sm:text-sm text-[#16f2b3]">
                     {experience.duration}
                   </p>
                 </div>
+
+                {/* Experience Details */}
                 <div className="flex items-center gap-x-8 px-3 py-5">
                   <div className="text-violet-500 transition-all duration-300 hover:scale-125">
                     <BsPersonWorkspace size={36} />
@@ -58,7 +73,6 @@ export default function Experience() {
           ))}
         </div>
       </div>
-
     </div>
   );
-};
+}

@@ -3,12 +3,22 @@ import Link from 'next/link';
 import { FaCode, FaPlay } from 'react-icons/fa';
 import placeholder from '/public/png/placeholder.png';
 
-const SingleProject = ({ project }) => {
+// Define the structure of the project prop
+interface Project {
+  name: string;
+  description: string;
+  tags: string[];
+  code: string;
+  demo: string;
+  image?: { src: string }; // image is optional, could be null or undefined
+  features?: string[]; // optional, assuming features could be an array of strings
+}
+
+const SingleProject: React.FC<{ project: Project }> = ({ project }) => {
   const { name, description, tags, code, demo, image, features } = project;
 
   return (
-    <div className='group w-full h-fit flex flex-col items-center justify-center relative cursor-text overflow-hidden px-3 md:px-8 py-[1.4rem] bg-[linear-gradient(90deg,#281e57_0%,#201435_100%)] shadow-2xl rounded-lg border border-[#1a1443]'
-    >
+    <div className='group w-full h-fit flex flex-col items-center justify-center relative cursor-text overflow-hidden px-3 md:px-8 py-[1.4rem] bg-[linear-gradient(90deg,#281e57_0%,#201435_100%)] shadow-2xl rounded-lg border border-[#1a1443]'>
       <div className="absolute left-0 top-0 flex justify-center opacity-40">
         <svg width="1170" height="403" viewBox="0 0 1170 403" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fillRule="evenodd" clipRule="evenodd" d="M1170 57.3509H0V56.5132H1170V57.3509Z" fill="white" fillOpacity="0.3"></path>
