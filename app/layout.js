@@ -10,9 +10,9 @@ import "./css/globals.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio of Siro Daves - Software Eng",
+  title: "Siro Daves | Software Eng. Flutter. MERN. Tech Writer",
   description:
-    "Hi, there. My name is Siro. I am a skilled software developer with experience in a range of technologies including Flutter,  Android, .Net, ReactJS, Git, Databases, REST APIs among others. As part of various teams, I  have demonstrated my ability to work collaboratively towards common goals. I am an  effective communicator and a team player who is committed to meeting project deadlines  and ensuring successful project outcomes. I am a team player dedicated to delivering  innovative software solutions that meet the clients' needs.",
+    "Software Engineer and Tech Writer. Best at Mobile app development with Flutter, Full Stack development with Mern. Other areas of expertise are Android, .Net and Qt.",
 };
 
 export default function RootLayout({ children }) {
