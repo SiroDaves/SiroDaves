@@ -2,7 +2,11 @@
 import Lottie from "lottie-react";
 import { useEffect, useState } from "react";
 
-const AnimationLottie = ({ animationFile }) => {
+interface AnimationLottieProps {
+  animationFile: any;
+}
+
+const AnimationLottie: React.FC<AnimationLottieProps> = ({ animationFile }) => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
