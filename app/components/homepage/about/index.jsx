@@ -9,7 +9,6 @@ import dynamic from "next/dynamic";
 
 const AnimationLottie = dynamic(() => import("../../helper/animation-lottie"), { ssr: false });
 
-
 function AboutSection() {
   return (
     <div id="about" className="my-12 lg:my-16 relative">

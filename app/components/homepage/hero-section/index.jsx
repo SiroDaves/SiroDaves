@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FcLike } from "react-icons/fc";
-import { FaHashnode } from "react-icons/fa6";
+import { FaHashnode, FaStrava, FaBlogger } from "react-icons/fa6";
 import { FaMedium, FaYoutubeSquare, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
@@ -26,11 +26,16 @@ function HeroSection() {
               <span className="text-[#ea580c]">{bio.name}</span>
             </Link>,
             <div className="flex items-center gap-2">
-              I just<FcLike />
+              I<FcLike />
               <Link href='https://flutter.dev' target='_blank'>
                 <span className="text-[#3b82f6]">{bio.designation2}</span>
               </Link>
-              <span className="-ml-3">.</span></div>
+              <span className="-ml-3">,</span>
+              <Link href={bio.strava} target='_blank'>
+                <span className="text-[#ef4444]">{bio.designation3}</span>
+              </Link>
+              <span className="-ml-3">!</span>
+            </div>
             I am a <Link href={bio.github} target='_blank'>
               <span className=" text-[#f97316]">{bio.designation1}</span>
             </Link>,
@@ -70,6 +75,13 @@ function HeroSection() {
               <FaMedium size={30} />
             </Link>
             <Link
+              href={bio.blogger}
+              target='_blank'
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+            >
+              <FaBlogger size={30} />
+            </Link>
+            <Link
               href={bio.youtube}
               target='_blank'
               className="transition-all text-pink-500 hover:scale-125 duration-300"
@@ -82,6 +94,13 @@ function HeroSection() {
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
               <FaTwitterSquare size={30} />
+            </Link>
+            <Link
+              href={bio.strava}
+              target='_blank'
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+            >
+              <FaStrava size={30} />
             </Link>
           </div>
 
