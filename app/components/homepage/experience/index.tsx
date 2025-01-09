@@ -23,18 +23,16 @@ export default function Experience() {
         className="absolute top-0 -z-10"
       />
 
-      {/* Section Header */}
       <div className="flex justify-center lg:py-8">
         <div className="flex items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
+          <span className="w-24 h-[2px] bg-[#c2410c]"></span>
+          <span className="bg-[#c2410c] w-fit text-white p-2 px-5 text-xl rounded-md">
             EXPERIENCES
           </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+          <span className="w-24 h-[2px] bg-[#c2410c]"></span>
         </div>
       </div>
 
-      {/* Experience Cards */}
       <div className="py-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
           {experiences.map((experience: Experience) => (
@@ -58,7 +56,7 @@ export default function Experience() {
 
                 {/* Experience Details */}
                 <div className="flex items-center gap-x-8 px-3 py-5">
-                  <div className="text-violet-500 transition-all duration-300 hover:scale-125">
+                  <div className="text-red-500 transition-all duration-300 hover:scale-125">
                     <BsPersonWorkspace size={36} />
                   </div>
                   <div>
