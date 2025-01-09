@@ -26,7 +26,7 @@ export default function Experience() {
       </div>
 
       <div className="py-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols2 gap-6">
           {experiences.map((experience) => (
             <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
               <div className="p-3 relative">

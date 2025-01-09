@@ -15,6 +15,8 @@ export interface Bio {
   twitter: string;
   medium: string;
   hashnode: string;
+  blogger: string;
+  strava: string;
   handle: string;
   cv: string;
 }
@@ -24,7 +26,7 @@ export const bio: Bio = {
   profile: '/profile.jpg',
   designation1: "Software Eng",
   designation2: "#Flutter",
-  designation3: "MERN",
+  designation3: "#Fitness",
   designation4: "Tech Writer",
   description: "Hi, there. My name is Siro. I am a skilled software developer with experience in a range of technologies including Flutter, Android, .Net, ReactJS, Git, Databases, REST APIs among others. As part of various teams, I have demonstrated my ability to work collaboratively towards common goals. I am an effective communicator and a team player who is committed to meeting project deadlines and ensuring successful project outcomes. I am a team player dedicated to delivering innovative software solutions that meet the clients' needs.",
   email: 'sirodevske [at] gmail [dot] com',
@@ -36,6 +38,8 @@ export const bio: Bio = {
   twitter: 'https://twitter.com/sirodaves',
   medium: "https://sirodaves.medium.com",
   hashnode: "https://siro.hashnode.dev",
+  blogger: "https://sirodaves.blogspot.com/",
+  strava: "https://www.strava.com/athletes/39986133",
   handle: "sirodaves",
   cv: "https://drive.google.com/file/d/1fx92a6ohdW6xqk2CIHhHP2ZnP0BgnUmf/view?usp=drive_link"
 };

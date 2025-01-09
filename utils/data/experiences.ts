@@ -43,7 +43,7 @@ export const experiences: Experience[] = [
     type: "On-site",
   },
   {
-    id: 5,
+    id: 6,
     title: 'Software Developer Intern',
     company: "Kenya School of TVET",
     duration: "Jan 2017 - Dec 2017",
