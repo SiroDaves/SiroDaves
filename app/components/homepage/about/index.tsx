@@ -9,16 +9,16 @@ import dynamic from "next/dynamic";
 
 const AnimationLottie = dynamic(() => import("../../helper/animation-lottie"), { ssr: false });
 
-interface AboutSectionProps {}
+interface AboutSectionProps { }
 
 const AboutSection: React.FC<AboutSectionProps> = () => {
   return (
-    <div id="about" className="my-12 lg:my-16 relative">
+    <div id="about-me" className="my-12 lg:my-16 relative">
       <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
-        <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
+        <span className="bg-[#c2410c] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
           ABOUT ME
         </span>
-        <span className="h-36 w-[2px] bg-[#1a1443]"></span>
+        <span className="h-36 w-[2px] bg-[#c2410c]"></span>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16">
         <div className="order-1 lg:order-1">
@@ -26,7 +26,9 @@ const AboutSection: React.FC<AboutSectionProps> = () => {
             Who am I?
           </p>
           <p className="text-gray-200 text-sm lg:text-lg">
-            {bio.description}
+            {bio.description1}
+          <br/> <br/>
+            {bio.description2}
           </p>
         </div>
         <div className="flex justify-center order-2 lg:order-2">
@@ -46,16 +48,16 @@ const AboutSection: React.FC<AboutSectionProps> = () => {
           {skills.map((skill, id) => (
             <div className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
               key={id}>
-              <div className="h-full w-full rounded-lg border border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500">
+              <div className="h-full w-full rounded-lg border border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 group-hover:border-red-500 transition-all duration-500">
                 <div className="flex -translate-y-[1px] justify-center">
                   <div className="w-3/4">
-                    <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
+                    <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-red-500 to-transparent" />
                   </div>
                 </div>
                 <div className="flex flex-col items-center justify-center gap-3 p-6">
                   <div className="h-8 sm:h-10">
                     <Image
-                      src={skillsImage(skill)?.src}
+                      src={skillsImage(skill) || '/path/to/default-image.jpg'}
                       alt={skill}
                       width={30}
                       height={30}

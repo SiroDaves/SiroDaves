@@ -1,11 +1,16 @@
-export const skills: string[] = [
+export const skills = [
   'Flutter',
   'Kotlin',
   'Swift',
+  'Firebase',
+  'Mongodb',
+  'MySQL',
+  'Javascript',
   'Typescript',
   'React',
-  'Node JS',
   'C#',
   'C++',
-  'Git'
-]
+  'Java',
+  'Git',
+  'Linux',
+];

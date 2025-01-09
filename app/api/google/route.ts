@@ -1,8 +1,12 @@
 import axios from "axios";
 import { NextResponse } from "next/server";
 
-export async function POST(request) {
-  const reqBody = await request.json();
+interface RequestBody {
+  token: string;
+}
+
+export async function POST(request: Request) {
+  const reqBody: RequestBody = await request.json();
   const secret_key = process.env.NEXT_PUBLIC_RECAPTCHA_SECRET_KEY;
 
   try {
@@ -13,8 +17,8 @@ export async function POST(request) {
       return NextResponse.json({
         message: "Captcha verification success!!",
         success: true,
-      })
-    };
+      });
+    }
 
     return NextResponse.json({
       error: "Captcha verification failed!",

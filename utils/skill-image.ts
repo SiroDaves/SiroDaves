@@ -82,7 +82,22 @@ import linux from '../app/assets/svg/skills/linux.svg'
 import sqlalchemy from '../app/assets/svg/skills/sqlalchemy.svg'
 import fastapi from '../app/assets/svg/skills/fastapi.svg'
 
-export const skillsImage = (skill) => {
+type Skill = 
+  | 'gcp' | 'html' | 'photoshop' | 'docker' | 'illustrator' | 'adobe xd' 
+  | 'after effects' | 'css' | 'angular' | 'javascript' | 'next js' 
+  | 'nuxt js' | 'react' | 'svelte' | 'typescript' | 'vue' | 'bootstrap' 
+  | 'bulma' | 'capacitorjs' | 'coffeescript' | 'memsql' | 'mongodb' | 'mysql' 
+  | 'postgresql' | 'tailwind' | 'vitejs' | 'vuetifyjs' | 'c' | 'c++' | 'c#' 
+  | 'dart' | 'go' | 'java' | 'kotlin' | 'julia' | 'matlab' | 'php' | 'python' 
+  | 'ruby' | 'swift' | 'adobe audition' | 'aws' | 'deno' | 'django' | 'firebase' 
+  | 'gimp' | 'git' | 'graphql' | 'lightroom' | 'materialui' | 'nginx' | 'numpy' 
+  | 'opencv' | 'premiere pro' | 'pytorch' | 'selenium' | 'strapi' | 'tensorflow' 
+  | 'webix' | 'wordpress' | 'azure' | 'blender' | 'fastify' | 'figma' | 'flutter' 
+  | 'haxe' | 'ionic' | 'markdown' | 'microsoft office' | 'picsart' | 'sketch' 
+  | 'unity' | 'wolframalpha' | 'canva' | 'pandas' | 'sklearn' | '.net' 
+  | '.net core' | 'kubernetes' | 'linux' | 'sqlalchemy' | 'fastapi';
+
+export const skillsImage = (skill: String): string | undefined => {
   const skillID = skill.toLowerCase();
   switch (skillID) {
     case 'gcp':
@@ -240,7 +255,7 @@ export const skillsImage = (skill) => {
     case '.net':
       return dotnet;
     case '.net core':
-      return dotnetcore
+      return dotnetcore;
     case 'kubernetes':
       return kubernetes;
     case 'linux':
@@ -250,6 +265,6 @@ export const skillsImage = (skill) => {
     case 'fastapi':
       return fastapi;
     default:
-      break;
+      return undefined;
   }
 }

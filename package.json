@@ -13,6 +13,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@next/third-parties": "^15.1.4",
+    "@types/nodemailer": "^6.4.17",
     "axios": "^1.7.9",
     "cra-template": "^1.2.0",
     "lottie-react": "^2.4.0",
