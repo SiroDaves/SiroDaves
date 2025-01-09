@@ -8,7 +8,7 @@ import { IoLogoGithub, IoMdCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
 import ContactForm from './contact-form';
 
-import lottieFile from '../../../assets/lottie/code.json';
+import lottieFile from '../../../assets/lottie/contact.json';
 import dynamic from "next/dynamic";
 
 const AnimationLottie = dynamic(() => import("../../helper/animation-lottie"), { ssr: false });
@@ -55,7 +55,7 @@ function ContactSection() {
               </span>
             </p>
           </div>
-          <div className="mt-8 lg:mt-16 flex items-center gap-5 lg:gap-10">
+          <div className="mt-8 lg:mt-10 flex items-center gap-5 lg:gap-10">
             <Link target="_blank" href={bio.github}>
               <IoLogoGithub
                 className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
