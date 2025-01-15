@@ -9,7 +9,7 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     id: 1,
-    title: 'Mobile App Developer',
+    title: 'Apps Developer',
     company: "Britam",
     duration: "June 2023 - Dec 2024",
     type: "Hybrid",

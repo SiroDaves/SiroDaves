@@ -19,7 +19,7 @@ export interface Bio {
   blogger: string;
   strava: string;
   handle: string;
-  cv: string;
+  resume: string;
 }
 
 export const bio: Bio = {
@@ -43,5 +43,5 @@ export const bio: Bio = {
   blogger: "https://sirodaves.blogspot.com/",
   strava: "https://www.strava.com/athletes/39986133",
   handle: "sirodaves",
-  cv: "https://drive.google.com/file/d/1fx92a6ohdW6xqk2CIHhHP2ZnP0BgnUmf/view?usp=drive_link"
+  resume: "https://drive.google.com/file/d/1KOxwFGw6XNXRcZo40JY63XLLO8mtZmnK/view?usp=sharing"
 };
