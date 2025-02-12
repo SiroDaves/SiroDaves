@@ -11,7 +11,7 @@ export const experiences: Experience[] = [
     id: 1,
     title: 'Apps Developer',
     company: "Britam",
-    duration: "June 2023 - Dec 2024",
+    duration: "June 2023 - Jan 2025",
     type: "Hybrid",
   },
   {
