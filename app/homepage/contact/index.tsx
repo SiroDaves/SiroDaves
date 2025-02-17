@@ -11,7 +11,7 @@ import ContactForm from './contact-form';
 import lottieFile from '../../assets/lottie/contact.json';
 import dynamic from "next/dynamic";
 
-const AnimationLottie = dynamic(() => import("@/utils/helper/animation-lottie"), { ssr: false });
+const AnimationLottie = dynamic(() => import("@/components/helper/animation-lottie"), { ssr: false });
 
 function ContactSection() {
   return (

@@ -7,7 +7,7 @@ import Marquee from "react-fast-marquee";
 import lottieFile from '../../assets/lottie/development.json';
 import dynamic from "next/dynamic";
 
-const AnimationLottie = dynamic(() => import("@/utils/helper/animation-lottie"), { ssr: false });
+const AnimationLottie = dynamic(() => import("@/components/helper/animation-lottie"), { ssr: false });
 
 interface AboutSectionProps { }
 
