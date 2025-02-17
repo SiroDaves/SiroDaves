@@ -3,7 +3,7 @@
 import { experiences } from "@/utils/data/experiences";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
-import GlowCard from "../../helper/glow-card";
+import GlowCard from "@/components/helper/glow-card";
 
 interface Experience {
   id: number;

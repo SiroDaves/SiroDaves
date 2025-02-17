@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 interface UserInput {
   name: string;
   email: string;
+  subject: string;
   message: string;
 }
 
@@ -23,11 +24,12 @@ const ContactForm: React.FC = () => {
   const [userInput, setUserInput] = useState<UserInput>({
     name: "",
     email: "",
+    subject: "",
     message: "",
   });
 
   const checkRequired = () => {
-    if (userInput.email && userInput.message && userInput.name) {
+    if (userInput.email && userInput.message && userInput.subject && userInput.name) {
       setError({ ...error, required: false });
     }
   };
@@ -35,7 +37,7 @@ const ContactForm: React.FC = () => {
   const handleSendMail = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!userInput.email || !userInput.message || !userInput.name) {
+    if (!userInput.email || !userInput.message || !userInput.subject || !userInput.name) {
       setError({ ...error, required: true });
       return;
     } else if (error.email) {
@@ -55,6 +57,7 @@ const ContactForm: React.FC = () => {
       setUserInput({
         name: "",
         email: "",
+        subject: "",
         message: "",
       });
     } catch (error: any) {
@@ -101,10 +104,23 @@ const ContactForm: React.FC = () => {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-base">Your Message: </label>
+            <label className="text-base">Your Subject: </label>
+            <input
+              className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
+              type="text"
+              maxLength={100}
+              required={true}
+              onChange={(e) => setUserInput({ ...userInput, subject: e.target.value })}
+              onBlur={checkRequired}
+              value={userInput.subject}
+            />
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <label className="text-base">Your Message goes here: </label>
             <textarea
               className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
-              maxLength={500}
+              maxLength={1000}
               name="message"
               required={true}
               onChange={(e) => setUserInput({ ...userInput, message: e.target.value })}

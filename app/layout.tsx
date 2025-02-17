@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Footer from "@/app/components/footer";
-import ScrollToTop from "@/app/components/helper/scroll-to-top";
-import Navbar from "@/app/components/navbar";
+import Footer from "@/components/footer";
+import ScrollToTop from "@/components/helper/scroll-to-top";
+import Navbar from "@/components/navbar";
 import "./css/card.scss";
 import "./css/globals.scss";
 
