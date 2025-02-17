@@ -8,10 +8,10 @@ import { IoLogoGithub, IoMdCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
 import ContactForm from './contact-form';
 
-import lottieFile from '../../../assets/lottie/contact.json';
+import lottieFile from '../../assets/lottie/contact.json';
 import dynamic from "next/dynamic";
 
-const AnimationLottie = dynamic(() => import("../../helper/animation-lottie"), { ssr: false });
+const AnimationLottie = dynamic(() => import("@/utils/helper/animation-lottie"), { ssr: false });
 
 function ContactSection() {
   return (
