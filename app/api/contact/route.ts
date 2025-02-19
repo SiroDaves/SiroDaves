@@ -22,9 +22,7 @@ const transporter = nodemailer.createTransport({
 // HTML email template
 const generateEmailTemplate = (name: string, email: string, userMessage: string): string => `
   <div>
-    <p>${userMessage}</p><br/>
-    <p>${name},</p>
-    <p>${email}</p>
+    <p>${userMessage}<br/><br/>With regards,<br/>${name},<br/>${email}</p>
   </div>
 `;
 
