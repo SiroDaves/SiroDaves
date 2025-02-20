@@ -53,7 +53,7 @@ const ContactForm: React.FC = () => {
         userInput
       );
 
-      toast.success("Message sent successfully!");
+      toast.success(`${userInput.name}, you message has been sent successfully!`);
       setUserInput({
         name: "",
         email: "",
