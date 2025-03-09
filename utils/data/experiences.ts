@@ -10,7 +10,7 @@ export const experiences: Experience[] = [
   {
     id: 1,
     title: 'Apps Developer',
-    company: "Britam",
+    company: "Britam EA",
     duration: "June 2023 - Jan 2025",
     type: "Hybrid",
   },
