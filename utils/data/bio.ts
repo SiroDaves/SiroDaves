@@ -43,5 +43,5 @@ export const bio: Bio = {
   blogger: "https://sirodaves.blogspot.com/",
   strava: "https://www.strava.com/athletes/39986133",
   handle: "sirodaves",
-  resume: "https://drive.google.com/file/d/1KOxwFGw6XNXRcZo40JY63XLLO8mtZmnK/view?usp=sharing"
+  resume: "https://drive.google.com/file/d/1RIByW1wm3gF8JMOu-liWZhiO2C8cmEZI/view?usp=sharing"
 };
