@@ -8,12 +8,24 @@ import java from '../../public/assets/svg/skills/java.svg';
 import typescript from '../../public/assets/svg/skills/typescript.svg';
 import javascript from '../../public/assets/svg/skills/javascript.svg';
 
+export const skills = [
+  'Dart',
+  'Kotlin',
+  'Swift',
+  'Php',
+  'Java',
+  'TypeScript',
+  'Javascript',
+  'C++',
+  'C#',
+];
+
 export const skillsImage = (skill: String): string | undefined => {
   const skillID = skill.toLowerCase();
   switch (skillID) {
-    case 'cplusplus':
+    case 'c++':
       return cplusplus;
-    case 'csharp':
+    case 'c#':
       return csharp;
     case 'dart':
       return dart;

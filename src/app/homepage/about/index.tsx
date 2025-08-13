@@ -1,7 +1,6 @@
 "use client";
 import { bio } from "@/data/bio";
-import { skills } from "@/data/skills";
-import { skillsImage } from "@/utils/skill-image";
+import { skills, skillsImage } from "@/utils/skill-image";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import lottieFile from '../../../../public/assets/lottie/development.json';
@@ -29,7 +28,7 @@ const AboutSection: React.FC = () => {
             {bio.description2}
           </p>
         </div>
-        <div className="flex justify-center order-2 lg:order-2">
+        <div className="flex justify-center order-2 m:order-2">
           <AnimationLottie animationFile={lottieFile} />
         </div>
       </div>
