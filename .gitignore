@@ -25,9 +25,11 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env*.local
 .env
+.env*.local
 
+#Google site verification
+google*.html
 # vercel
 .vercel
 
