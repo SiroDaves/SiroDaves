@@ -25,9 +25,9 @@ export interface Bio {
 }
 
 export const bio: Bio = {
-  name: "Siro Daves",
+  name: "Dev Siro",
   profile: '/profile.jpg',
-  designation1: "Software Engineer",
+  designation1: "Software Eng",
   designation2: "#Flutter",
   designation3: "#Fitness",
   designation4: "Tech Writer",
@@ -37,15 +37,15 @@ export const bio: Bio = {
   email: 'sirodevske @ gmail . com',
   phone: '+254 795 145 999',
   address: 'Nairobi, Kenya',
-  github: 'https://github.com/sirodaves',
-  linkedIn: 'https://www.linkedin.com/in/sirodaves/',
+  github: 'https://github.com/sirodevs',
+  linkedIn: 'https://www.linkedin.com/in/sirodevs/',
   youtube: 'https://www.youtube.com/@sirodaves',
-  twitter: 'https://twitter.com/sirodaves',
-  medium: "https://sirodaves.medium.com",
+  twitter: 'https://twitter.com/sirodevs',
+  medium: "https://sirodevs.medium.com",
   hashnode: "https://siro.hashnode.dev",
-  blogger: "https://sirodaves.blogspot.com/",
+  blogger: "https://sirodevs.blogspot.com/",
   strava: "https://www.strava.com/athletes/39986133",
   mentor: "https://bit.ly/SiroMentor",
-  handle: "sirodaves",
+  handle: "sirodevs",
   resume: "https://drive.google.com/file/d/1CAJFsbmtQ2zg1CrUAjsjQYa4SpFXMtIj/view?usp=sharing"
 };
