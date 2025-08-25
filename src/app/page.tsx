@@ -1,19 +1,19 @@
-import AboutSection from "@/app/homepage/about";
+import AboutSection from "@/app/homepage/about-me";
 import BlogSection from "@/app/homepage/blog";
-import ContactSection from "@/app/homepage/contact";
+import ContactSection from "@/app/homepage/contact-me";
 import Experience from "@/app/homepage/experience";
 import HeroSection from "@/app/homepage/hero-section";
 import Projects from "@/app/homepage/projects";
 
 export default function Home() {
   return (
-    <div suppressHydrationWarning>
+    <main>
       <HeroSection />
       <AboutSection />
       <Experience />
       <Projects />
       <BlogSection />
       <ContactSection />
-    </div>
+    </main>
   );
 };

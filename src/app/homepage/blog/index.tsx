@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 import { bio } from "@/data/bio";
 import { FaArrowRight } from 'react-icons/fa';
 import BlogCard from './blog-card';
@@ -7,7 +8,15 @@ import { getHashnode } from '@/state/blog';
 async function BlogSection() {
   const blogs = await getHashnode();
   return (
-    <div id='blog' className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+    <section id='blog' className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+      
+      <Image
+        src="/section.svg"
+        alt="Section Background"
+        width={1572}
+        height={1572}
+        className="absolute top-0 -z-10"
+      />
       <div className="w-[100px] h-[100px] bg-red-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
 
       <div className="flex justify-center -translate-y-[1px]">
@@ -46,7 +55,7 @@ async function BlogSection() {
           <FaArrowRight size={16} />
         </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

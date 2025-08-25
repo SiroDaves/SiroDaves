@@ -5,7 +5,6 @@ interface Project {
   description: string;
   tools: string[];
   role: string;
-  image?: { src: string };
   demo: string;
   code: string;
 }

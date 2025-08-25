@@ -3,7 +3,7 @@ import { bio } from "@/data/bio";
 import { skills, skillsImage } from "@/utils/skill-image";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import lottieFile from "../../../../public/assets/lottie/development.json";
+import lottieFile from "../../../public/assets/lottie/development.json";
 import dynamic from "next/dynamic";
 
 const AnimationLottie = dynamic(

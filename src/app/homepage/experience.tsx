@@ -1,10 +1,10 @@
 "use client";
 
-import { experiences } from "@/data/experiences";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import GlowCard from "@/components/helper/glow-card";
 import { durationCalculation } from "@/utils/main-utils";
+import { experiences } from "@/data/experiences";
 
 interface Experience {
   id: number;
@@ -25,7 +25,7 @@ export default function Experience() {
         src="/section.svg"
         alt="Section Background"
         width={1572}
-        height={795}
+        height={1572}
         className="absolute top-0 -z-10"
       />
 
@@ -80,13 +80,11 @@ export default function Experience() {
                       <span className="uppercase">{experience.company}</span>
                     </p>
 
-                    <p>
-                      <ul className="list-disc">
-                        {experience.descriptions.map((descr, i) => (
-                          <li className="text-sm mb-2">{descr}</li>
-                        ))}
-                      </ul>
-                    </p>
+                    <ul className="list-disc">
+                      {experience.descriptions.map((descr, i) => (
+                        <li key={`d_${i}`} className="text-sm mb-2">{descr}</li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
