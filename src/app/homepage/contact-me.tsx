@@ -1,11 +1,12 @@
 "use client";
-import { isValidEmail } from "@/utils/main-utils";
+
 import axios from "axios";
+import Image from "next/image";
 import { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
 import { toast } from "react-toastify";
+import { isValidEmail } from "@/utils/main-utils";
 
-// Define types for user input and error state
 interface UserInput {
   name: string;
   email: string;
@@ -87,7 +88,14 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div>
+    <section id='contact-me' className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+      <Image
+        src="/section.svg"
+        alt="Section Background"
+        width={1572}
+        height={1572}
+        className="absolute top-0 -z-10"
+      />
       <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
         Contact me
       </p>
@@ -188,7 +196,7 @@ const ContactForm: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
