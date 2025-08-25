@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
           <Link
             href="/"
             className="text-[#ea580c] text-3xl font-bold">
-            SIRO DAVES
+            DEV SIRO
           </Link>
         </div>
 
@@ -20,13 +20,13 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#experience"><div className="text-sm text-white transition-colors duration-300 hover:text-orange-600">EXPERIENCE</div></Link>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#experience"><div className="text-sm text-white transition-colors duration-300 hover:text-orange-600">MY EXPERIENCE</div></Link>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#projects"><div className="text-sm text-white transition-colors duration-300 hover:text-orange-600">PROJECTS</div></Link>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#projects"><div className="text-sm text-white transition-colors duration-300 hover:text-orange-600">MY PROJECTS</div></Link>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#blog"><div className="text-sm text-white transition-colors duration-300 hover:text-orange-600">TECH BLOG</div></Link>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#blog"><div className="text-sm text-white transition-colors duration-300 hover:text-orange-600">MY TECH BLOG</div></Link>
           </li>
           <li>
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#contact-me"><div className="text-sm text-white transition-colors duration-300 hover:text-orange-600">CONTACT ME</div></Link>

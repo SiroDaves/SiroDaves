@@ -9,7 +9,7 @@ const Projects = () => {
         <div className="w-[80px] h-[80px] bg-red-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl opacity-30"></div>
         <div className="flex items-center justify-start relative">
           <span className="bg-[#c2410c] absolute left-0 w-fit text-white px-5 py-3 text-xl rounded-md">
-            PROJECTS
+            PROJECTS I HAVE WORKED ON
           </span>
           <span className="w-full h-[2px] bg-[#c2410c]"></span>
         </div>

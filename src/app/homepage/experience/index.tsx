@@ -12,6 +12,7 @@ interface Experience {
   title: string;
   company: string;
   type: string;
+  descriptions: string[];
 }
 
 export default function Experience() {
@@ -32,7 +33,7 @@ export default function Experience() {
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-[#c2410c]"></span>
           <span className="bg-[#c2410c] w-fit text-white p-2 px-5 text-xl rounded-md">
-            EXPERIENCES
+            MY WORKING EXPERIENCE
           </span>
           <span className="w-24 h-[2px] bg-[#c2410c]"></span>
         </div>
@@ -55,13 +56,16 @@ export default function Experience() {
                 />
 
                 <div className="flex justify-center">
-                  <p><span className="text-m m:text-sm text-[#16f2b3]">
-                    {experience.duration}
-                  </span>
-                  <span> - </span>
-                  <span className="text-m sm:text-m text-[#c2410c]">
-                    {durationCalculation(experience.duration)}
-                  </span>
+                  <p>
+                    <span className="text-m m:text-sm text-[#16f2b3]">
+                      {experience.duration}
+                    </span>
+                    <span> | </span>
+                    <span className="text-m sm:text-m text-[#c2410c]">
+                      {durationCalculation(experience.duration)}
+                    </span>
+                    <span> - </span>
+                    {experience.type}
                   </p>
                 </div>
 
@@ -70,12 +74,18 @@ export default function Experience() {
                     <BsPersonWorkspace size={36} />
                   </div>
                   <div>
-                    <p className="text-base sm:text-xl mb-2 font-medium uppercase">
-                      {experience.title}
+                    <p className="text-base sm:text-xl mb-2 font-medium">
+                      <span className="uppercase">{experience.title}</span>
+                      <span className="italic text-[#c2410c]"> at </span>
+                      <span className="uppercase">{experience.company}</span>
                     </p>
 
-                    <p className="text-sm sm:text-base font-semibold">
-                      {experience.company} - {experience.type}
+                    <p>
+                      <ul className="list-disc">
+                        {experience.descriptions.map((descr, i) => (
+                          <li className="text-sm mb-2">{descr}</li>
+                        ))}
+                      </ul>
                     </p>
                   </div>
                 </div>
