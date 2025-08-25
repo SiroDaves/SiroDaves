@@ -4,8 +4,6 @@ import { bio } from "@/data/bio";
 import Image from "next/image";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FcLike } from "react-icons/fc";
-import { FaHeart } from "react-icons/fa";
 import { FaHashnode, FaStrava, FaBlogger } from "react-icons/fa6";
 import { FaMedium, FaYoutubeSquare, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
@@ -26,38 +24,20 @@ const HeroSection = () => {
         <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
           <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem] space-y-2">
   <span className="block">
-    Hi, I am{" "}
+    Hi there, welcome here. I am{" "}
     <Link href={bio.linkedIn} target="_blank" className="hover:underline hover:text-[#f97316] transition-colors">
-      <span className="text-[#22c55e]">Siro</span>.
-    </Link>
-    <span className="inline-flex items-center gap-2 ml-2">
-      I just <FaHeart className="animate-pulse text-blue-500" />
-    </span> {" "}
-    <Link href="https://flutter.dev" target="_blank" className="hover:underline hover:text-[#60a5fa] transition-colors">
-      <span className="text-[#ef4444]">{bio.designation2}</span>
-    </Link>
-    {" "} and {" "}
-    <Link href={bio.strava} target="_blank" className="hover:underline hover:text-[#f87171] transition-colors">
-      <span className="text-[#ef4444]">{bio.designation3}</span>
-    </Link>
-    !
-  </span>
-
-  <span className="block">
-    I am a{" "}
+      <span className="text-[#22c55e]">Siro</span>
+    </Link>, a{" "}
     <Link href={bio.github} target="_blank" className="hover:underline hover:text-[#fb923c] transition-colors">
       <span className="text-[#f97316]">{bio.designation1}</span>
     </Link>
-    ,<br className="hidden sm:block" />
-    a{" "}
+    , a{" "}
     <Link href={bio.hashnode} target="_blank" className="hover:underline hover:text-[#4ade80] transition-colors">
       <span className="text-[#f97316]">{bio.designation4}</span>
-    </Link>
-    , and a{" "}
+    </Link> and a{" "}
     <Link href={bio.mentor} target="_blank" className="hover:underline hover:text-[#4ade80] transition-colors">
       <span className="text-[#f97316]">{bio.designation5}</span>
-    </Link>
-    .
+    </Link>!
   </span>
 </h1>
 
